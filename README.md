@@ -1,73 +1,94 @@
-# React + TypeScript + Vite
+# DevWeb-2 — Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Versão frontend do projeto DevWeb-2 — uma aplicação construída com React, TypeScript e Vite.
 
-Currently, two official plugins are available:
+**Status:** Pronto para desenvolvimento local. Código enviado para o repositório remoto.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Visão geral
 
-## React Compiler
+Este repositório contém a camada frontend do exercício 2 (React + TypeScript). A estrutura é minimalista, usando Vite para desenvolvimento rápido com HMR e suporte a TypeScript.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Principais tecnologias:
+- React 18
+- TypeScript
+- Vite
+- ESLint (configuração básica)
 
-## Expanding the ESLint configuration
+## Estrutura do projeto
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- `public/` — ativos estáticos
+- `src/` — código fonte da aplicação
+  - `main.tsx` — ponto de entrada
+  - `App.tsx` — componente raiz
+  - `components/` — componentes React
+  - `contexts/` — provedor(es) de contexto
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Pré-requisitos
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- Node.js 18+ (ou versão estável LTS)
+- npm ou yarn
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Instalação (local)
+
+1. Instale dependências:
+
+```bash
+npm install
+# ou
+yarn
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Rode em modo desenvolvimento (HMR):
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
+# ou
+yarn dev
 ```
+
+3. Build de produção:
+
+```bash
+npm run build
+# ou
+yarn build
+```
+
+4. Servir artefatos de produção localmente:
+
+```bash
+npm run preview
+# ou
+yarn preview
+```
+
+## Scripts úteis (em `package.json`)
+
+- `dev` — inicia o servidor de desenvolvimento
+- `build` — cria os arquivos de produção
+- `preview` — serve a build localmente
+- `lint` — executa o ESLint (se configurado)
+
+## Boas práticas e sugestões
+
+- Adicione um arquivo `.gitignore` adequado (ex.: `node_modules`, `dist`, `.env`).
+- Configure ESLint com regras de TypeScript mais estritas para produção.
+- Documente componentes mais complexos e regras de estilo no repositório.
+
+## Como contribuir
+
+1. Faça um fork/clonar do repositório.
+2. Crie uma branch com um nome descritivo: `feat/minha-funcionalidade`.
+3. Abra um Pull Request explicando a mudança.
+
+## Licença
+
+Este projeto está sem licença especificada. Se desejar, adicione um arquivo `LICENSE` com a licença apropriada (por exemplo, MIT).
+
+---
+
+Se quiser, eu posso:
+- adicionar um `.gitignore` padrão;
+- configurar um `LICENSE` (ex.: MIT);
+- ajustar o `package.json` com campos `homepage`/`repository`.
+Diga o que prefere que eu faça em seguida.

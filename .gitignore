@@ -1,4 +1,44 @@
-# Logs
+## Node
+node_modules/
+dist/
+build/
+
+## Vite
+.vite/
+/.cache/
+
+## Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+## Environment
+.env
+.env.*.local
+.env.local
+
+## TypeScript
+*.tsbuildinfo
+
+## Editor directories and files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+## OS files
+.DS_Store
+Thumbs.db
+
+## Coverage
+coverage/
+
+## Misc
+*.tgz
+*.lock# Logs
 logs
 *.log
 npm-debug.log*
