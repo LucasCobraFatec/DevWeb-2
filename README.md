@@ -81,14 +81,3 @@ yarn preview
 2. Crie uma branch com um nome descritivo: `feat/minha-funcionalidade`.
 3. Abra um Pull Request explicando a mudança.
 
-## Licença
-
-Este projeto está sem licença especificada. Se desejar, adicione um arquivo `LICENSE` com a licença apropriada (por exemplo, MIT).
-
----
-
-Se quiser, eu posso:
-- adicionar um `.gitignore` padrão;
-- configurar um `LICENSE` (ex.: MIT);
-- ajustar o `package.json` com campos `homepage`/`repository`.
-Diga o que prefere que eu faça em seguida.
